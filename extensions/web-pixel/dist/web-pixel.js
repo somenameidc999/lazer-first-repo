@@ -1,0 +1,1 @@
+(()=>{var o="WebPixel::Render";var t=e=>shopify.extend(o,e);var i="https://tract-ordinance-circulation-them.trycloudflare.com";t(({analytics:e,browser:c})=>{e.subscribe("apply_discount",s=>{console.log("Apply Discount Clicked");let r=`${i}/pixel`;fetch(r,{method:"POST"})})});})();

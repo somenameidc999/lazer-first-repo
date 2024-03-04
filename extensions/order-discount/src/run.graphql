@@ -1,0 +1,24 @@
+query RunInput {
+  cart {
+    attribute(key: "discountAmount") {
+      key
+      value
+    }
+    lines {
+      quantity
+      merchandise {
+        ...on ProductVariant {
+          id
+          __typename
+          product {
+            productType
+          }
+        }
+        ...on CustomProduct {
+          title
+          __typename
+        }
+      }
+    }
+  }
+}

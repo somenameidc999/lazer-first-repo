@@ -1,0 +1,25 @@
+api_version = "2024-01"
+
+[[extensions]]
+type = "ui_extension"
+name = "checkout-ui"
+handle = "checkout-ui"
+
+[[extensions.targeting]]
+module = "./src/Checkout.tsx"
+target = "purchase.checkout.block.render"
+
+  # For the above target, use these metafields
+  [[extensions.targeting.metafields]]
+  namespace = "custom"
+  key = "discount"
+
+[extensions.capabilities]
+api_access = true
+
+[extensions.settings]
+[[extensions.settings.fields]]
+key = "collection_to_hide"
+type = "single_line_text_field"
+name = "Collection"
+description = "Enter a title of the collection to hide"
